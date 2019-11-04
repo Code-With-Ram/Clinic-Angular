@@ -1,0 +1,25 @@
+ 
+ <html>
+  <head>
+    <script src="angular.min.js">
+    </script>
+    <script>
+      var app = angular.module("myApp",[]);
+      app.controller("NumberCtrl",function($scope) {
+          $scope.number = 0;
+          $scope.showNumber = function(){ 
+               alert($scope.number);
+               $scope.number = 0;
+          };
+          
+      });
+  </script>
+ </head>
+ <body>
+<div ng-app="myApp" ng-controller="NumberCtrl">
+<p>Number: <input type="number" ng-model="number"></p>
+<p>Number = {{ number }}</p>
+<button ng-click="showNumber()">Show Number</button>
+</div>
+
+</body>

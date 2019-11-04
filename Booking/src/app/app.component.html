@@ -1,0 +1,29 @@
+<html>
+<head>
+
+  </head>
+  <body >
+
+          <div id="Hamburger">
+              <input type="checkbox" id="menu-toggle"/>
+              <label id="trigger" for="menu-toggle"></label>
+              <label id="burger" for="menu-toggle"></label>
+              <ul id="menu">
+                <li><a href="#" (click)="showHome()">Home</a></li>
+                <li><a href="#" (click)="showBooking()">Booking</a></li>
+                <li><a href="#" (click)="showAdmin()">Admin</a></li>
+                <li><a href="#" (click)="showAppointmentStatus()">Status</a></li>
+                <li><a href="#" (click)="showAbout()">About</a></li>
+
+              </ul>
+          </div>
+    <h1 style="text-align: center;  background-color: #03A9F4;
+    "> Swathi {{title}}</h1>
+
+
+<app-admin [style.display]="canAdminDisplay ? 'block': 'none'"></app-admin>
+<app-booking [style.display]="canBookingDisplay ? 'block': 'none'"></app-booking></body>
+<app-home [style.display]="canShowHome ? 'block': 'none'">
+</app-home>
+<app-status [style.display]="canAppointmentStatusDisplay ? 'block': 'none'"></app-status>
+</html>

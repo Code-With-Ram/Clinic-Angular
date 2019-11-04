@@ -1,0 +1,107 @@
+<html>
+    <script type="text/javascript">
+
+      var c = 0;
+      function pop(){
+        alert("hi");
+        if(c ==0)
+        {	document.getElementById("box").style.display = "block";
+        c =1;
+        }
+        else{
+          document.getElementById("box").style.display = "none";
+        c =0;
+
+        }
+      }
+    </script>
+
+<body>
+    <div class="appointment_form">
+
+
+
+  <h1 style="text-align: center">Doctor Appointment Form</h1>
+<form #bookform="ngForm">
+
+
+    <table border="0" cellpadding = 5px cellspacing="10" width=80%>
+  <tr>
+    <td><label class="lbl">Name</label></td>
+    <td><input type="text" [(ngModel)]="BookForm.name" name="name"/></td>
+  </tr>
+  <tr>
+    <td>    <label class="lbl">Date of Birth</label></td>
+    <td>
+        <input type="date" [(ngModel)]="BookForm.dob" name="dob"/></td>
+  </tr>
+  <tr>
+      <td>    <label class="lbl">Gender</label></td>
+      <td>  <select [(ngModel)]="BookForm.gender" name="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Not mentioned">Not willing to disclose</option>
+        </select>
+      </td>
+  </tr>
+
+  <tr>
+      <td>    <label class="lbl" aria-placeholder="### ### ####">Phone</label>
+        </td>
+      <td><input type="text" [(ngModel)]="BookForm.phone" name="phone"/></td>
+  </tr>
+
+  <tr>
+      <td>    <label class="lbl">Email</label>
+      </td>
+      <td>    <input type="email" [(ngModel)]="BookForm.email" name="phone"/>
+      </td>
+  </tr>
+
+  <tr>
+      <td>    <label class="lbl">Address</label>
+      </td>
+      <td>    <textarea cols="12" rows="10" aria-disabled="true" [(ngModel)]="BookForm.address" name="address"></textarea>
+      </td>
+  </tr>
+
+  <tr>
+      <td>    <label class="lbl">Appointment Type</label>
+      </td>
+      <td>    <select [(ngModel)]="BookForm.issue" name="issue">
+          <option value="Cold / Fever">Cold / Fever</option>
+          <option value="Diabetes">Diabetes</option>
+          <option value="ENT">ENT</option>
+          <option value="Regular Checkup">Regular Checkup</option>
+          <option value="Other">Other</option>
+        </select></td>
+  </tr>
+
+  <tr>
+
+      <td>
+      </td>
+      <td>
+      </td>
+  </tr>
+
+
+</table>
+
+<input type="submit" (click)="onSubmit()" value="Submit"/>
+<input type="reset"/>
+</form>
+
+
+</div>
+<div id = 'box' [style.display]="canPop ? 'block': 'none'">
+
+  <span><img src="./../../assets/checkmark.png" width="50px" height="50px"/></span>
+    <h1 >Your Appointment done Successfully!!</h1>
+    <a (click)="pop()" class="close" >Ok</a>
+
+</div>
+
+</body>
+</html>
+

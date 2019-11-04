@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script src="angular.min.js">
+    </script>
+<script>
+    var app = angular.module("myApp",[]);
+    app.controller("myCtrl",function($scope) {
+        $scope.firstName = "Ram";
+        $scope.lastName = "Kishor";
+        
+    })
+</script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl" >
+
+<div  >
+<input type="text" ng-model="firstName" /></br>
+<input type="text" ng-model="lastName" /></br>
+<h1>Hello {{ firstName + " " + lastName }}</h1>
+</div>
+
+<div > 
+<h4>{{ firstName + " " + lastName }}</h4> 
+</div>
+
+
+</body>
+</html>

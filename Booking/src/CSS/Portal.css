@@ -1,0 +1,84 @@
+
+
+#portal .popup_box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+#portal .popup_box{
+  width: 400px;
+  height: 300px;
+  background: #f2f2f2;
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid #b3b3b3;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  z-index: 9999;
+}
+
+#portal .popup_box h1{
+  font-size: 30px;
+  color: #1b2631;
+  margin-bottom: 5px;
+}
+#portal .popup_box label{
+  font-size: 23px;
+  color: #404040;
+}
+#portal .popup_box .btns{
+  margin: 40px 0 0 0;
+  display: block;
+}
+#portal .btns .btn1, .btns .btn2{
+  background: #999999;
+  color: white;
+  display: block;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #808080;
+  padding: 10px 13px;
+}
+#portal .btns .btn2{
+  background: #ff3333;
+  margin-top: 20px;
+  border: 1px solid #cc0000;
+}
+#portal .btns .btn1:hover{
+  transition: .5s;
+  background: #8c8c8c;
+}
+#portal .btns .btn2:hover{
+  transition: .5s;
+  background: #e60000;
+}
+
+
+#portal .not_icon{
+
+  background-color: #f2f2f2;
+  transition: 0.5s;
+  animation: scale linear 1s infinite;
+}
+
+@keyframes scale
+{
+
+  0% {
+      opacity:1;
+      transform: translateY(0px);
+  }
+50%{
+  opacity:0.5;
+      transform: translateY(10px);
+
+}
+  100% {
+      opacity: 1s;
+      transform: translateY(0px);
+  }
+
+}

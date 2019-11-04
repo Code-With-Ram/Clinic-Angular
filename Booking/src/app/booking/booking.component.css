@@ -1,0 +1,223 @@
+ @import './../../CSS/alertbox.css';
+
+ .appointment_form{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border-radius: 5px;
+  width: 70%;
+  height: 1100px;
+  background:#009879;
+  text-align: center;
+  align-items: center;
+
+  padding: 10px;
+  border: 1px solid #b3b3b3;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  z-index: -10;
+}
+input,textarea{
+	width: 90%;
+	padding: 12px;
+	animation: none;
+	border:1px solid #fff;
+	border-radius: 4px solid #fff;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	background-color: #0CF;
+	box-sizing: border-box;
+  color: #fff;
+  font: 300 18px/1.5 'Roboto' , sans-serif;
+}
+
+tr{
+  padding:10px;
+}
+input:focus{
+  background-color: #09C;
+  box-shadow: 0 0 0 2px;
+  transition: 0.6s all;
+    animation: input-pulse 1.5s infinite;
+
+
+
+
+
+
+  }
+
+  select
+  {
+    position: relative;
+    background: #fff;
+  	background-color: #0CF;
+    border: 1px solid #1cbe9d;
+    height: 50px;
+    cursor: pointer;
+    width: 90%;
+    font: 300 18px/1.5 'Roboto' , sans-serif;
+  }
+
+  select:before{
+    content: '';
+    background: #1cbe9d;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    pointer-events: none;
+
+  }
+  select:after{
+    content: '';
+    width: 0;
+    height:0;
+    border-style: solid;
+    border-width: 10px 7px 0;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    transform: translate(-50%,50%);
+  }
+
+select:focus
+{
+  outline: none;
+  background-color: #09C;
+  animation: input-pulse 1.5s infinite;
+
+}
+
+option
+{
+  font: 300 18px/1.5 'Roboto' , sans-serif;
+  border: 1px solid #1cbe9d;
+  height: 50px;
+  cursor: pointer;
+  width: 90%;
+  background-color: #0CF;
+  border: 1px solid #1cbe9d;
+}
+
+option:hover
+{
+  font: 500 18px/1.5 'Roboto' , sans-serif;
+  border: 1px solid #1cbe9d;
+  height: 50px;
+  cursor: pointer;
+  width: 90%;
+  background-color: #0CF;
+  border: 1px solid #1cbe9d;
+}
+
+
+
+  textarea:focus{
+  background-color: #09C;
+  box-shadow: 0 0 0 2px rgba(255,255,255,1);
+  transition: 0.6s all;
+    animation: input-pulse 1.4s infinite;
+  }
+
+  .lbl{
+    color: #001;
+    font-size: 22px;
+  }
+
+
+
+  @keyframes dance-up
+  {
+
+    0% {
+        opacity:1;
+    }
+  50%{
+    opacity:0.5;
+  }
+    100% {
+        opacity: 1s;
+    }
+
+  }
+
+
+
+  @keyframes input-pulse
+  {
+    0% {
+      box-shadow: 0 0 0 2px rgba(255,255,255,1);
+      opacity:1;
+
+    }
+
+    100% {
+      box-shadow: 0 0 0 8px rgba(255,255,255,0.04);
+           opacity:0.9;
+
+
+    }
+  }
+
+
+
+
+  input[type="submit"]{
+  	background: rgba(30, 144, 255, 0.6);
+  	box-shadow: 0 0 0 2px;
+  	border-radius: 1px solid black;
+  	padding: 12px 99px;
+	transition: 0.6s all;
+	cursor: pointer;
+	align-content: center;
+  animation: none;
+    width: 30%;
+    display: inline-block;
+
+}
+
+input[type="reset"]{
+  background: rgba(30, 144, 255, 0.6);
+  box-shadow: 0 0 0 2px;
+  border-radius: 1px solid black;
+  padding: 12px 99px;
+transition: 0.6s all;
+cursor: pointer;
+align-content: center;
+animation: none;
+width: 30%;
+margin-left: 25px;
+display: inline-block;
+}
+
+
+input[type="submit"]:hover{
+background: rgba(100, 184, 255, 0.4);
+	box-shadow: 0 0 0 2px;
+
+  animation: shadow-pulse 1s infinite;
+}
+
+input[type="reset"]:hover{
+  background: rgba(100, 184, 255, 0.4);
+    box-shadow: 0 0 0 2px;
+
+    animation: shadow-pulse 1s infinite;
+  }
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(100, 184, 255, 1);
+  }
+  50% {
+    box-shadow: 0 0 0 0px rgba(100, 184, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 35px rgba(100, 184, 255, 0.05);
+  }
+}

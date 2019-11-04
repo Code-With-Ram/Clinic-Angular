@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="style1.css">
+
+<script src="angular.min.js"></script>
+<script src="/home/ram/Documents/jquery-3.4.1.js"></script>
+<script src="controller.js"></script>
+<script src="Examples/showhide.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="control">
+
+
+<div class="logo">
+Swathi Clinic</div>
+<div class="navbar">
+  <ul>
+    <li class="active"><a id="home" href="">Home</a></li>
+    <li><a id="Form" href="#">Feedback Form</a></li>
+    <li><a id="ShowForm" href="#">Admin</a></li>
+  </ul>
+</div>
+<br>
+<br>
+
+<div id="Home">
+  <img src="clinic1.jpeg" width="1200px" style="margin-left: 9%;" height="800px">
+</div>
+<div id="Feedbackform" ng-style="FormStyle">
+<h3 style="text-align: center;">Feedback Form</h3>
+
+<div class="container" >
+  <form  name = "feedbackform" ng-submit="addFeedback(feedbackform.$valid)">
+    <label for="name">Name</label>
+    <input type="text" id="fname" name="name" placeholder="Your name.." ng-model="name" ng-keyup="autoComplete('name',$event.keyCode)">
+
+    <label for="email">E-mail</label>
+    <input type="text" id="email" name="mail" placeholder="Your e-mail" ng-model="email" ng-keyup="autoComplete('email',$event.keyCode)">
+     
+
+    <label for="subject">Feedback on doctors and nurses</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" ng-model="feedDoctor"></textarea>
+    
+    <label for="subject">Feedback on food</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" ng-model="feedFood"></textarea>
+     <label for="star">Star Rating</label>
+     <br>
+    <fieldset class="rating" >
+    <input type="radio" id="star5" name="rating" ng-model="rating" ng-value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" ng-model="rating" ng-value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" ng-model="rating" ng-value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" ng-model="rating" ng-value="3.5" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" ng-model="rating" ng-value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" ng-model="rating" ng-value="2.5" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" ng-model="rating" ng-value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" ng-model="rating" ng-value="1.5" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" ng-model="rating" ng-value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" ng-model="rating" ng-value="0.5" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+   
+  </fielsdset>    
+  <br>
+  <input type="submit" style="display:inline-block;" value="Submit">
+
+    </form>
+   </div>
+</div>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id='ShowFeedback' ng-style="FeedStyle"><ul>
+  
+ 	
+	<div class="container" ng-repeat="feed in Feedbacks" >
+		<div class="card">
+			<div class="face face1">
+				<div class="content">
+          <p class="karma">{{feed[0]}}</p>
+
+
+          <h3 style="float: right;"> Rating - {{feed[4]}}/5</h3>
+
+
+
+				</div>
+
+			</div>
+			<br>
+			<div class="face face2">
+				<div class="content">
+          
+          {{feed[2]}}
+          <br>
+          {{feed[3]}}
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+  
+
+
+</div>
+
+</body>
+</html>

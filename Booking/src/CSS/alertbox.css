@@ -1,0 +1,51 @@
+
+#box{
+
+	font-family: "Montserrat";
+
+
+  width: 600px;
+	overflow: hidden;
+	background: #f1f1f1;
+	box-shadow: 0 0 20px black;
+	border-radius: 9px;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%,120%);
+
+	z-index: 9999;
+	padding: 10px;
+	text-align: center;
+	display: none;
+}
+
+
+#box span{
+
+	color: #2ecc71;
+	font-size: 40px;
+	margin: 20px 0;
+	display: block;
+
+}
+
+#box h1{
+
+	color: #333;
+
+}
+
+
+.close
+{
+	font-size: 17px;
+	color: white;
+	padding: 10px 20px;
+	cursor: pointer;
+	background: #3498db;
+	display: inline-block;
+	border-radius: 4px;
+}
+
+

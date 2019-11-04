@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript" src="/home/ram/Documents/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+
+	<p>Click the button to get your coordinates.</p>
+
+	<button onclick="getLocation()">Try It</button>
+
+	<p id="demo"></p>
+	<script>
+		var x = document.getElementById("demo");
+		var jsonObject, decodedJSON, locationOfTheUser;
+		var restaurantsInYelahanka = ['']
+
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} else {
+				x.innerHTML = "Geolocation is not supported by this browser.";
+			}
+		}
+
+		function showPosition(position) {
+			x.innerHTML = "Latitude: " + position.coords.latitude +
+				"<br>Longitude: " + position.coords.longitude;
+			$.getJSON("http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=RyDbyMAwF4gdnPcabtlH0roIGcmAXaqX&q=" + position.coords.latitude + '%2C' + position.coords.longitude, function(data) {
+
+				jsonObject = JSON.stringify(data, null, 4);
+				console.log(jsonObject);
+				decodedJSON = JSON.parse(jsonObject);
+				locationOfTheUser = decodedJSON['EnglishName'];
+				
+				alert(locationOfTheUser);
+			});
+		}
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+
+<h1 style="text-align: center">Appointments</h1>
+<table class="content-table">
+<thead><tr>
+    <th>Token</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Issue</th>
+    <th>Time</th>
+</tr></thead>
+<tbody *ngFor="let pat of patient">
+  <tr>
+  <td>{{pat.token}}</td>
+  <td>{{pat.name}}</td>
+  <td>{{pat.age}}</td>
+  <td>{{pat.email}}</td>
+  <td>{{pat.phone}}</td>
+  <td>{{pat.issue}}</td>
+  <td>{{pat.time}}</td>
+
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+</html>

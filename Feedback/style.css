@@ -1,0 +1,158 @@
+body {font-family: Arial, Helvetica, sans-serif;	background-color: #333;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+	padding: 0;
+}
+
+.navbar
+{
+		height: 80px;
+		width: 100%;
+		background-color:#15a0b9; 
+}
+
+
+.navbar ul
+{
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+	margin-right: 5px;
+
+
+}
+
+.navbar ul li 
+{
+	display: inline-block;
+
+}
+
+.navbar ul li a
+{  font-family: "Montserrat";
+  font-size: 20px;	display: inline-block;
+	text-decoration:none;
+	color: #fff;
+	padding: 5px 50px;
+	border: none;1.5px solid #fff;
+	transition: 0.3s all ease-in;
+}
+
+.navbar ul li.active a
+{  font-family: "Montserrat";
+  font-size: 18px;
+	background-color: none;
+	border-collapse: separate;
+	border-bottom: 2px solid #fff;
+	color: #000;
+
+}
+
+.navbar ul li a:hover
+{
+	background-color: #fff;
+	color: #000;
+
+}
+
+.logo
+{	
+	margin-top: 15px;
+	font-size: 45px;
+	color: white;
+	float: left;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+.rating > input:checked ~ label, 
+.rating:not(:checked) > label:hover, 
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } 
+
+.rating > input:checked + label:hover, 
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, 
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+ font-family: "Montserrat";
+  font-size: 20px;
+
+}
+h3{
+   font-family: "Montserrat";font-size: 20px;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  width: 200%;
+  left: 60%;
+  margin-left: 50%;
+  float: right;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+   font-family: "Montserrat";
+  font-size: 20px;
+  transform: translateX(180%);
+}
+.container {
+  border-radius: 15px;
+  background-color: #f3f2f2;
+  padding: 20px;
+  border-width: 4px;
+  border: 3px solid dodgerblue;
+  transform: translateX(-2%);
+}
+
+#Feedbackform .container {
+  height: 860px;
+
+}

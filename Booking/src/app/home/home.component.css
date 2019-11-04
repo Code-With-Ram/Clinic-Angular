@@ -1,0 +1,45 @@
+.contact-us {
+  border-radius: 5px;
+  transform: translateY(70%);
+	}
+
+
+.contact-us input,textarea{
+  width: 70%;
+  background: #272727;
+  font-family: "Montserrat";
+  font-size: 22px;
+
+  color: #bebdbd;
+  resize: none;
+  transform: translateX(25%);
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border:none;
+}
+
+.contact-us input:focus,textarea:focus {
+	background: #1a1a1a;
+}
+.contact-us input[type=submit] {
+  width: 26%;
+  font-family: "Montserrat";
+  font-size: 22px;
+
+  background-color: #4CAF50;
+  color: white;
+  transform: translate(-120%,70%);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,36 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+
+<h1 style="text-align: center;">Status View</h1>
+
+<button class="accordion" (click)="showSearch()">Search Token</button>
+<div class="panel" [style.display]="canSearchDisplay ? 'block': 'none'">
+    <app-search></app-search>
+
+</div>
+
+<button class="accordion" (click)="showToken()">Token Details</button>
+<div class="panel" [style.display]="canTokenDisplay ? 'block': 'none'">
+  <app-token></app-token>
+
+</div>
+
+<button class="accordion" (click)="showOption()">Options</button>
+<div class="panel" [style.display]="canOptionDisplay ? 'block': 'none'">
+  <app-options></app-options>
+
+</div>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
