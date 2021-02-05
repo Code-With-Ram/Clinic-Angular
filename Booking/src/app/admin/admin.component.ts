@@ -7,7 +7,7 @@ import {RecordService} from './../record.service';
 })
 export class AdminComponent implements OnInit {
 
-  public patient = [];
+  public patient:any;
 
   constructor(private recordService: RecordService) { }
 

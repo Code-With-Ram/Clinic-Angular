@@ -8,7 +8,7 @@ import {BookingForm} from './../booking-form';
 })
 export class BookingComponent implements OnInit {
 
-  public patient = [];
+  public patient:any;
   public lasttime = 4;
   public lasttoken=4;
   public BookForm = new BookingForm('' , '' , '' , '' , '' , '' , '');
@@ -18,7 +18,7 @@ export class BookingComponent implements OnInit {
     this.patient = this.recordService.patient;
 
   }
-  getAge(dob) {
+  getAge(dob:any) {
 
     var today = new Date().toDateString();
     var year = parseInt(today.substring(today.length - 4));
