@@ -8,7 +8,7 @@ import {RecordService} from './../../record.service';
 })
 export class TokenComponent implements OnInit {
   public tokenDetails={};
-  constructor(private recordService: RecordService) { }
+  constructor(public recordService: RecordService) { }
 
 
   ngOnInit() {

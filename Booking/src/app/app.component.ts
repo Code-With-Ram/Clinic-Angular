@@ -49,4 +49,9 @@ showAppointmentStatus() {
   this.canContactDisplay=  false;
   this.canAboutDisplay=  false;
   this.canShowHome = false;
-}}
+}
+showAbout(){
+  
+}
+
+}

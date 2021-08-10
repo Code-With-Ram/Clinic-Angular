@@ -17,7 +17,7 @@ public patient =
 public tokenDetails= {'token':0,'name':'','age':0,'phone':'','email':'','gender':'','address':'', 'issue':'','time':''};
   constructor() { }
 
-getToken(token){
+getToken(token:any){
   //alert('dscds');
   this.tokenDetails= {'token':0,'name':'','age':0,'phone':'','email':'','gender':'','address':'', 'issue':'','time':''};
   for (let i = 0; i < this.patient.length; i++) {

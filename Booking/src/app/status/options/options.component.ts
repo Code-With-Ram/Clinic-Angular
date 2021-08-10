@@ -14,7 +14,7 @@ export class OptionsComponent implements OnInit {
   ngOnInit() {
 
   }
-Update(index)
+Update(index:any)
 {
   var time = parseInt(this.recordService.patient[index-1].time[0])
   alert("Appointment canceled");
